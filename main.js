@@ -107,7 +107,7 @@ window.addEventListener("mousemove", (event) => {
   const mouseX = (window.innerWidth / 2 - event.clientX) / 1000;
   const mouseY = (window.innerHeight / 2 - event.clientY) / 1000;
   // targetRotationX = -mouseY;
-  targetRotationY = -mouseX;
+  targetRotationY = -mouseX * 3;
 });
 
 window.addEventListener("resize", () => {
@@ -124,8 +124,8 @@ const box1 = document.querySelector(".box1");
 box1.addEventListener("click", () => {
   window.location.href = "https://shlokarth911.github.io/Project-Three-Model1/";
 });
-const box2 = document.querySelector(".box1");
+const box2 = document.querySelector(".box2");
 
 box2.addEventListener("click", () => {
-  window.location.href = "https://shlokarth911.github.io/Project-Three-Model1/";
+  window.location.href = "https://shlokarth911.github.io/Project-Three-Model3/";
 });
