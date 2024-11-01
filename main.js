@@ -27,8 +27,8 @@ const camera = new THREE.PerspectiveCamera(
 );
 
 camera.position.z = 0;
-camera.position.y = 0.4;
-camera.position.x = -2.5;
+camera.position.y = 0.2;
+camera.position.x = -2;
 camera.lookAt(scene.position);
 
 //renderer
