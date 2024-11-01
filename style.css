@@ -1,0 +1,186 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  color: #fff;
+  text-decoration: none;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #000;
+}
+
+canvas {
+  display: block;
+  height: 100vh;
+  width: 100vw;
+}
+
+.main {
+  height: 100vh;
+  width: 100vw;
+  position: relative;
+}
+
+.main canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.main img {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  width: 25%;
+  mix-blend-mode: lighten;
+  animation: imageAnimation 1s;
+}
+
+@keyframes imageAnimation {
+  from {
+    top: 40%;
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.9;
+  }
+}
+
+nav {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  padding: 1.5vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7vw;
+  backdrop-filter: blur(10px);
+  z-index: 99;
+}
+
+nav a {
+  text-decoration: none;
+  font-size: 1vw;
+  font-weight: 100;
+  text-transform: uppercase;
+  transition: 0.4s;
+  letter-spacing: 2px;
+  color: #fff;
+}
+
+nav a:hover {
+  scale: 110%;
+  color: rgb(113, 186, 255);
+}
+
+.about {
+  height: 100vh;
+  width: 100%;
+}
+
+.about-part1 {
+  padding: 10vw 8vw;
+}
+
+.about-part1 h1 {
+  font-size: 2.5vw;
+  font-weight: 400;
+}
+
+.about-part1 h1 span {
+  color: rgb(60, 172, 247);
+  text-shadow: 0 0 10px rgba(60, 150, 240, 0.973);
+  background-image: linear-gradient(
+    to right,
+    rgb(60, 172, 247),
+    rgb(255, 255, 255),
+    rgb(253, 24, 24)
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+.about-part1 p {
+  width: 48%;
+  font-size: 1.1vw;
+  margin-top: 1vw;
+}
+
+.about-part2 {
+  text-align: right;
+  padding: 10vw 8vw;
+}
+
+.about-part2 a {
+  font-size: 2vw;
+  font-weight: 400;
+  transition: all 0.3s;
+}
+
+.about-part2 a:hover {
+  color: rgb(60, 172, 247);
+  text-shadow: 0 0 10px rgb(60, 172, 247);
+}
+
+footer {
+  margin: 3vw 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8vw;
+  gap: 10vw;
+  font-size: 1.5vw;
+}
+
+.box {
+  width: 6vw;
+  height: 6vw;
+  border-radius: 50%;
+  background-color: #000;
+  border: 1px solid #fff;
+  transition: all 0.5s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.box:hover {
+  width: 50%;
+  border-radius: 100vh;
+  gap: 5%;
+}
+
+.box h1 {
+  font-size: 0;
+  font-weight: 400;
+  transition: all 0.5s;
+}
+
+.box i {
+  font-size: 2vw;
+  font-weight: 100;
+  transition: all 0.5s;
+}
+
+.box:hover h1 {
+  font-size: 1.5vw;
+}
