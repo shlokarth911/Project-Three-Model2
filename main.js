@@ -114,8 +114,8 @@ window.addEventListener("resize", () => {
   camera.aspect = window.innerWidth / window.innerHeight;
   camera.updateProjectionMatrix();
   renderer.setSize(window.innerWidth, window.innerHeight);
+  composer.setSize(window.innerWidth, window.innerHeight);
 });
-
 //render
 composer.render();
 
@@ -128,4 +128,62 @@ const box2 = document.querySelector(".box2");
 
 box2.addEventListener("click", () => {
   window.location.href = "https://shlokarth911.github.io/Project-Three-Model3/";
+});
+
+//animation using gsap
+const navBtn = document.querySelector(".nav-btn");
+let flag = true;
+navBtn.addEventListener("click", () => {
+  if (flag == false) {
+    flag = true;
+    navBtn.textContent = "OPEN";
+    let tl = gsap.timeline();
+
+    tl.to(".nav-main a ", {
+      fontSize: 0,
+      duration: 0.1,
+    });
+
+    tl.to(".nav-main", {
+      height: "2vw",
+      width: "2vw",
+      padding: "0vw",
+      duration: 0.5,
+      ease: "power1.out",
+    });
+
+    tl.to(".nav-main", {
+      height: "0vw",
+      width: "0vw",
+      padding: "0vw",
+      transform: "translate(0vw, -10vw)",
+      duration: 0.5,
+      ease: "power1.out",
+    });
+  } else if (flag == true) {
+    flag = false;
+    let tl = gsap.timeline();
+    navBtn.textContent = "CLOSE";
+
+    tl.to(".nav-main", {
+      height: "2vw",
+      width: "2vw",
+      padding: "0vw",
+      transform: "translate(0vw, 0vw)",
+      duration: 0.5,
+      ease: "power1.out",
+    });
+
+    tl.to(".nav-main", {
+      height: "auto",
+      width: "auto",
+      padding: "1vw 3vw",
+      duration: 0.5,
+    });
+
+    tl.to(".nav-main a ", {
+      fontSize: "1.5vw",
+      duration: 0.1,
+    });
+  }
 });
