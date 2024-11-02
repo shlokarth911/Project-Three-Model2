@@ -72,6 +72,7 @@ nav {
   justify-content: center;
   flex-direction: column;
   padding: 1vw 0;
+  z-index: 9999;
 }
 
 nav button {
