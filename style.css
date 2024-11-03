@@ -91,9 +91,9 @@ nav button {
   overflow: hidden;
   flex-wrap: nowrap;
   box-shadow: 0 0 20px #fff;
-  backdrop-filter: blur(50px);
   z-index: top;
   transform: translate(0vw, -10vw);
+  backdrop-filter: blur(10px);
 }
 
 .nav-main a {

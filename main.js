@@ -182,6 +182,7 @@ navBtn.addEventListener("click", () => {
     });
 
     tl.to(".nav-main a ", {
+      delay: -0.1,
       fontSize: "1.5vw",
       duration: 0.1,
     });
